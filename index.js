@@ -46,7 +46,6 @@ app.post("/lg",(req, res) =>{
 app.get("/dashboard", (req, res) => {
     if (req.cookies.email) {
         const email = req.cookies.email;
-        console.log(email);
         res.sendFile(path.join(htmlfolder, "new.html"),{ email:email });
     } else {
         res.redirect('/');
