@@ -12,8 +12,13 @@ NOTE:-: no logs are being kept by the application
 future goals :::
 
 Logs
+
 Attachments
+
 emojis
+
 increase in error tolerance
+
 mongodb
+
 better styles
