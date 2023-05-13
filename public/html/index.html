@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login form cookie enabled</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./fill.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat box</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form action="/lg" method="post">
-        <label for="email"><b>Email</b></label>
-        <input type="text"class="email" name="email" required>
-        <label for="password"><b>Password</b></label>
-        <input type="password" class="password" name="password" required>
-        <button type="submit">Login</button>
-    </form>
+  <h1 class="heading">Community Chat</h1>
+  <br>
+  <div class="chatdiv">
+  <div class="chat-dump">
+    <div class="client_dump"></div>
+    <div class="user_dump"></div>
+  </div>
+    <form class="chat-form">
+        <input type="text" class="chat-input" placeholder="Enter a message">
+        <input type="submit" class="chat-submit" value="enter">
+      </form>
+      
+    <form action="/logout" method="get">
+      <button type="submit" class="btn">Logout</button>
+  </form>
+  </div>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

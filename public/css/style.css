@@ -1,18 +1,130 @@
-
 *{
     margin: 0;
-    padding: 0;
+    padding:0;
 }
 body{
     height: 100vh;
     width: 100vw;
+    background-color: #FFB6C1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form{
+.chatdiv{
+    width: 100%;
+    height:90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+.chat-submit{
+    padding:1vh;
+    border-radius: 1vh;
+    background-color: darkorchid;
+    width:14vw;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: none;
+}
+.chat-input{
+    padding:1vh;
+    border-radius: 1vh;
+    background-color: violet;
+    width:64vw;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    border: none;
+}
+.chat-input::placeholder{
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+.chat-dump{
+    background-color: aqua;
+    height:85vh;
+    width: 80vw;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.chat-message--client{
+    font-size: 3vh;
+    float: left;
+    width: fit-content;
+    padding: 1rem;
+}
+.chat-message--user{
+    font-size: 2vh;
+    float: right;
+    width: fit-content;
+    padding: 1rem;
+}
+.free{
+    background-color: lightyellow;
+    border-radius: 1vw;
+    margin-top: 0.5vw;
+}
+.chat-client_div{
+    background-color: cadetblue;
+    border-radius: 1vw;
+    height: auto;
+    width: auto;
+    margin-top: 0.5vw;
+}
+.chat-user_div{
+    background-color:crimson;
+    border-radius: 1vw;
+    height: auto;
+    width: auto;
+    margin-top: 0.5vw;
+}
+.client_dump{
+    height:85vh;
+    width: 40vw;
+    /* background-color: lightgreen; */
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.user_dump{
+    height:85vh;
+    width: 40vw;
+    /* background-color: lightslategray; */
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.btn{
+    height: 5vh;
+    width:80vw;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 0.5rem;
 }
