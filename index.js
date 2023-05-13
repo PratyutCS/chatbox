@@ -20,7 +20,6 @@ app.set('view engine','ejs');
 let htmlfolder = path.join(__dirname, "/public/html");
 
 app.get("/", (req, res) => {
-  console.log("/is here");
   if (req.cookies.email) {
       res.redirect("/dashboard");
   }
