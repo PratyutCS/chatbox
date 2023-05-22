@@ -38,7 +38,6 @@ app.post("/lg",(req, res) =>{
   console.log(email+" -- "+pass);
   for(let i =0;i<un.length;i++){
       if(un[i] === email.trim() && passw[i]==pass.trim()){
-          console.log(true);
           res.cookie('email', email, { expires: 0 })
           return res.status(200).redirect("/dashboard");
       }
@@ -48,9 +47,14 @@ app.post("/lg",(req, res) =>{
 
 app.get("/dashboard", (req, res) => {
   if (req.cookies.email) {
+    let i=0;
+  for(;i<un.length;i++){
+    if(un[i] === (req.cookies.email).trim()){
       res.sendFile(path.join(htmlfolder, "index.html"));
-  } else {
-      res.redirect('/');
+    }
+  }
+  }else {
+    res.redirect('/');
   }
 });
 
